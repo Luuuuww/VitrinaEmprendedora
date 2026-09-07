@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^registro\.html$ registro-proxy.php [L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>

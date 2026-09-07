@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos - Laboulaye Vitrina Emprendedora</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="calendar-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                        <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-trigger">
+                            Servicios
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="escuela-emprendedores.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                Escuela Emprendedores
+                            </a>
+                            <a href="cal.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                Calendario de eventos
+                            </a>
+                            <a href="herramientas-digitales.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                Herramientas Digitales
+                            </a>
+                            <a href="financiamiento.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                </svg>
+                                Financiamiento
+                            </a>
+                        </div>
+                    </div>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+                
+                <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </div>
+            <h1 class="page-hero-title">Calendario de Eventos</h1>
+            <p class="page-hero-description">
+                Agenda actualizada por día, mes y año para consultar actividades de la ciudad y encuentros para emprendedores.
+            </p>
+        </div>
+    </section>
+
+    <main class="main-content-page">
+        <div class="container">
+            <section class="city-calendar-section">
+                <div class="section-heading-row">
+                    <div>
+                        <h2 class="section-title left">Calendario de eventos de la ciudad</h2>
+                        <p class="section-subtitle left">Consultá las actividades actualizadas por día, mes y año.</p>
+                    </div>
+                    <div class="today-pill" id="calendarTodayLabel">Hoy</div>
+                </div>
+
+                <div class="calendar-shell">
+                    <div class="calendar-panel">
+                        <div class="calendar-toolbar">
+                            <button class="calendar-nav-btn" id="prevCalendarMonth" aria-label="Mes anterior">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 18l-6-6 6-6"></path>
+                                </svg>
+                            </button>
+                            <h3 id="calendarMonthLabel">Mes</h3>
+                            <button class="calendar-nav-btn" id="nextCalendarMonth" aria-label="Mes siguiente">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <span>Dom</span>
+                            <span>Lun</span>
+                            <span>Mar</span>
+                            <span>Mié</span>
+                            <span>Jue</span>
+                            <span>Vie</span>
+                            <span>Sáb</span>
+                        </div>
+                        <div class="calendar-grid" id="cityCalendar"></div>
+                    </div>
+
+                    <aside class="calendar-detail">
+                        <p class="calendar-detail-eyebrow">Eventos seleccionados</p>
+                        <h3 id="selectedDateTitle">Seleccioná un día</h3>
+                        <div class="selected-events-list" id="selectedCityEvents"></div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Eventos de emprendedores -->
+            <section class="entrepreneur-events-section">
+                <h2 class="section-title">Eventos de emprendedores</h2>
+                <p class="section-subtitle">Actividades para feriantes, productores, comercios y proyectos locales.</p>
+                <div class="entrepreneur-events-grid" id="entrepreneurEventsGrid"></div>
+            </section>
+
+            <!-- Objetivos Section -->
+            <section class="objectives-section legacy-red-section">
+                <h2 class="section-title">Nuestros Objetivos</h2>
+                <p class="section-subtitle">El Calendario de eventos está diseñado para fortalecer el ecosistema emprendedor local</p>
+                
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <div class="objective-number">1</div>
+                        <p>Fortalecer las capacidades emprendedoras a través de formación, acompañamiento y vinculación educativa.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">2</div>
+                        <p>Consolidar el ecosistema emprendedor mediante redes, experiencias y casos locales de referencia.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">3</div>
+                        <p>Fomentar la colaboración entre emprendedores para potenciar el desarrollo económico local.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-number">4</div>
+                        <p>Crear un espacio de intercambio de conocimientos y buenas prácticas empresariales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beneficios Section -->
+            <section class="benefits-section legacy-red-section">
+                <h2 class="section-title">Beneficios de la Red</h2>
+                <p class="section-subtitle">Descubre todo lo que podés lograr siendo parte de nuestra comunidad emprendedora</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title purple">NETWORKING LOCAL</h3>
+                        <p class="service-description">
+                            Conecta con emprendedores de tu zona para crear alianzas estratégicas y colaboraciones.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title blue">FORO DE DISCUSIÓN</h3>
+                        <p class="service-description">
+                            Participa en conversaciones sobre tendencias, desafíos y oportunidades del mercado local.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <line x1="19" y1="8" x2="19" y2="14"></line>
+                                <line x1="22" y1="11" x2="16" y2="11"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title green">COLABORACIONES</h3>
+                        <p class="service-description">
+                            Encuentra socios para proyectos conjuntos y expande tu alcance comercial.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon orange">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title orange">EVENTOS Y ENCUENTROS</h3>
+                        <p class="service-description">
+                            Asiste a reuniones presenciales y virtuales para conocer a otros emprendedores.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon pink">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="service-title pink">CASOS DE ÉXITO</h3>
+                        <p class="service-description">
+                            Aprende de las experiencias de emprendedores locales que han logrado crecer.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon indigo">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title indigo">RECURSOS COMPARTIDOS</h3>
+                        <p class="service-description">
+                            Accede a una biblioteca de recursos, plantillas y herramientas compartidas.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emprendedores Activos -->
+            <section class="entrepreneurs-section legacy-red-section">
+                <h2 class="section-title">Emprendedores Activos en la Red</h2>
+                <p class="section-subtitle">Conocé a algunos de los emprendedores que ya forman parte de nuestra comunidad</p>
+                
+                <div class="entrepreneurs-grid">
+                    <div class="entrepreneur-network-card">
+                        <div class="entrepreneur-avatar gradient">MG</div>
+                        <h3>María González</h3>
+                        <p class="entrepreneur-business">Dulces Artesanales MG</p>
+                        <span class="badge">Gastronomía</span>
+                        <div class="entrepreneur-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Centro
+                        </div>
+                        <div class="entrepreneur-connections">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            45 conexiones
+                        </div>
+                    </div>
+
+                    <div class="entrepreneur-network-card">
+                        <div class="entrepreneur-avatar gradient">CR</div>
+                        <h3>Carlos Rodríguez</h3>
+                        <p class="entrepreneur-business">TechLab Soluciones</p>
+                        <span class="badge">Tecnología</span>
+                        <div class="entrepreneur-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Norte
+                        </div>
+                        <div class="entrepreneur-connections">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            38 conexiones
+                        </div>
+                    </div>
+
+                    <div class="entrepreneur-network-card">
+                        <div class="entrepreneur-avatar gradient">AM</div>
+                        <h3>Ana Martínez</h3>
+                        <p class="entrepreneur-business">Verde Vida</p>
+                        <span class="badge">Sustentabilidad</span>
+                        <div class="entrepreneur-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Sur
+                        </div>
+                        <div class="entrepreneur-connections">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            52 conexiones
+                        </div>
+                    </div>
+
+                    <div class="entrepreneur-network-card">
+                        <div class="entrepreneur-avatar gradient">PS</div>
+                        <h3>Pedro Sánchez</h3>
+                        <p class="entrepreneur-business">Creaciones PS</p>
+                        <span class="badge">Artesanías</span>
+                        <div class="entrepreneur-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Centro
+                        </div>
+                        <div class="entrepreneur-connections">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            29 conexiones
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cómo Unirse -->
+            <section class="how-to-join-section legacy-red-section">
+                <h2 class="section-title">¿Cómo unirte a la Red?</h2>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Registrate</h3>
+                        <p>Creá tu cuenta en la Vitrina Emprendedora</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Completá tu perfil</h3>
+                        <p>Agregá información sobre tu emprendimiento</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Conectá</h3>
+                        <p>Buscá y conectá con otros emprendedores</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3>Colaborá</h3>
+                        <p>Participá en eventos y proyectos conjuntos</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Próximos Eventos -->
+            <section class="events-section legacy-red-section">
+                <h2 class="section-title">Próximos Eventos de Networking</h2>
+                <p class="section-subtitle">Participá en nuestros encuentros para conocer a otros emprendedores</p>
+                
+                <div class="events-grid">
+                    <div class="event-card purple">
+                        <div class="event-date">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            15 de Abril, 2025
+                        </div>
+                        <h3>Café Emprendedor</h3>
+                        <p>Encuentro informal para compartir experiencias y hacer networking en un ambiente relajado.</p>
+                        <span class="badge">Presencial</span>
+                    </div>
+
+                    <div class="event-card orange">
+                        <div class="event-date">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            22 de Abril, 2025
+                        </div>
+                        <h3>Webinar: Alianzas Estratégicas</h3>
+                        <p>Aprende cómo crear alianzas comerciales que potencien tu negocio.</p>
+                        <span class="badge outline">Virtual</span>
+                    </div>
+
+                    <div class="event-card green">
+                        <div class="event-date">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            30 de Abril, 2025
+                        </div>
+                        <h3>Feria de Emprendedores</h3>
+                        <p>Exhibí tus productos y servicios ante la comunidad de Laboulaye.</p>
+                        <span class="badge">Presencial</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12" y2="8"></line>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">© 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=9"></script>
+</body>
+</html>

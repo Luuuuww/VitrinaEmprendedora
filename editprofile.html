@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar perfil - Laboulaye</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="emprendedores.html" class="nav-link">Emprendedores</a>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+
+                <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="edit-profile-card">
+                <div class="registro-header edit-profile-header">
+                    <div>
+                        <h1 class="registro-title">Editar emprendimiento</h1>
+                        <p class="registro-description" id="editProfileDescription">Selecciona un emprendimiento del panel para editar sus datos.</p>
+                    </div>
+                    <button class="btn btn-outline" type="button" id="logoutBtn">Cerrar sesion</button>
+                </div>
+
+                <div class="login-emprendimientos profile-emprendimientos" id="profileEmprendimientos"></div>
+
+                <form class="registro-form" id="editProfileForm" hidden>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="profileNegocio">Nombre del emprendimiento</label>
+                            <input type="text" id="profileNegocio" name="negocio">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileNombre">Nombre del emprendedor</label>
+                            <input type="text" id="profileNombre" name="nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileCategoria">Categoria</label>
+                            <select id="profileCategoria" name="categoria">
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="artesanias">Artesanias</option>
+                                <option value="belleza">Belleza y Cuidado</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="moda">Moda</option>
+                                <option value="alimentacion">Alimentacion</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileTelefono">Telefono</label>
+                            <input type="text" id="profileTelefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileEmail">Email</label>
+                            <input type="email" id="profileEmail" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileUbicacion">Ubicacion</label>
+                            <input type="text" id="profileUbicacion" name="ubicacion">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileInstagram">Instagram</label>
+                            <input type="text" id="profileInstagram" name="instagram">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileFacebook">Facebook</label>
+                            <input type="text" id="profileFacebook" name="facebook">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileHorarios">Horarios</label>
+                            <input type="text" id="profileHorarios" name="horarios">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profileDescripcion">Descripcion corta</label>
+                        <textarea id="profileDescripcion" name="descripcion" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profileDetalle">Descripcion completa</label>
+                        <textarea id="profileDetalle" name="detalle" rows="5"></textarea>
+                    </div>
+
+                    <div class="edit-section">
+                        <div class="edit-section-header">
+                            <h2>Especialidades</h2>
+                            <div class="inline-add">
+                                <input type="text" id="newEspecialidad" placeholder="Nueva especialidad">
+                                <button class="btn btn-outline" type="button" id="addEspecialidadBtn">Agregar</button>
+                            </div>
+                        </div>
+                        <div class="editable-chip-list" id="especialidadesEditor"></div>
+                    </div>
+
+                    <div class="edit-section">
+                        <div class="edit-section-header">
+                            <h2>Fotos</h2>
+                            <div class="inline-add">
+                                <input type="url" id="newFotoUrl" placeholder="URL de imagen">
+                                <button class="btn btn-outline" type="button" id="addFotoUrlBtn">Agregar URL</button>
+                            </div>
+                        </div>
+
+                        <label class="upload-area compact-upload" for="profileFotoFile">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <p>Cargar mas fotos</p>
+                            <small>Selecciona imagenes desde tu equipo</small>
+                            <input type="file" id="profileFotoFile" accept="image/*" multiple>
+                        </label>
+
+                        <div class="editable-photo-grid" id="fotosEditor"></div>
+                    </div>
+
+                    <p class="form-message" id="editProfileMessage" aria-live="polite"></p>
+
+                    <div class="form-buttons">
+                        <button class="btn btn-primary btn-lg" type="submit">Guardar cambios</button>
+                        <button class="btn btn-outline btn-lg" type="button" id="clearProfileBtn">Eliminar datos</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">&copy; 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=6"></script>
+</body>
+</html>

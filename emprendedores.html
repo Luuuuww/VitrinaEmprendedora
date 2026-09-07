@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprendedores - Laboulaye</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="entrepreneurs-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                        <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-trigger">
+                            Servicios
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="escuela-emprendedores.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                Escuela Emprendedores
+                            </a>
+                            <a href="cal.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                Calendario de eventos
+                            </a>
+                            <a href="herramientas-digitales.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                Herramientas Digitales
+                            </a>
+                            <a href="financiamiento.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                </svg>
+                                Financiamiento
+                            </a>
+                        </div>
+                    </div>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+                    <a href="login.html" class="btn btn-outline nav-login">Iniciar sesion</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Nuestros Emprendedores</h1>
+                <p class="page-description">
+                    Conoce a los emprendedores locales que forman parte de nuestra comunidad y descubre sus 
+                    productos y servicios únicos.
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="category-badge active" data-category="todas">Todas</button>
+                <button class="category-badge" data-category="gastronomia">Gastronomía</button>
+                <button class="category-badge" data-category="artesanias">Artesanías</button>
+                <button class="category-badge" data-category="belleza">Belleza y Cuidado</button>
+                <button class="category-badge" data-category="tecnologia">Tecnología</button>
+                <button class="category-badge" data-category="moda">Moda</button>
+                <button class="category-badge" data-category="alimentacion">Alimentación</button>
+            </div>
+
+            <!-- Emprendedores Grid -->
+            <div class="emprendedores-grid" id="emprendedoresGrid">
+                <!-- Los emprendedores se cargarán dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more">
+                <button class="btn btn-outline-white">Cargar más emprendedores</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">© 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
