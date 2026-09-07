@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Inscripcion - Laboulaye</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="registration-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                        <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="btn btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Volver al inicio
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="registro-container">
+                <div class="page-header registro-page-header">
+                    <span class="registro-eyebrow">Registro municipal</span>
+                    <h1 class="page-title">Ficha Unica de Inscripcion</h1>
+                    <p class="page-description">
+                        Registro Municipal de Emprendedores de Laboulaye
+                    </p>
+                    <div class="registro-steps" aria-label="Etapas del registro">
+                        <span><b>1</b> Tus datos</span>
+                        <span><b>2</b> Tu emprendimiento</span>
+                        <span><b>3</b> Tu cuenta</span>
+                    </div>
+                </div>
+
+                <div class="registro-card">
+                    <div class="registro-header">
+                        <span class="registro-card-label">Completá tu perfil</span>
+                        <h2 class="registro-title">Datos Requeridos para el Registro</h2>
+                        <p class="registro-description">Completa todos los campos obligatorios (*) para inscribir tu emprendimiento</p>
+                    </div>
+
+                    <form id="registroForm" class="registro-form">
+                        
+                        <!-- DATOS DEL EMPRENDEDOR -->
+                        <div class="form-section">
+                            <h3 class="section-title-form">Datos del Emprendedor/a</h3>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="nombreApellido">Nombre y Apellido *</label>
+                                    <input type="text" id="nombreApellido" name="nombreApellido" required 
+                                           placeholder="Juan Perez">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dni">DNI *</label>
+                                    <input type="text" id="dni" name="dni" required pattern="[0-9]{7,8}" 
+                                           placeholder="12345678">
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fechaNacimiento">Fecha de Nacimiento *</label>
+                                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                                    <small>Debes ser mayor de 18 anios</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="domicilioParticular">Domicilio Particular *</label>
+                                    <input type="text" id="domicilioParticular" name="domicilioParticular" required 
+                                           placeholder="Calle 123, Laboulaye">
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="telefono">Telefono de Contacto *</label>
+                                    <input type="tel" id="telefono" name="telefono" required 
+                                           placeholder="+54 9 3385 123456">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo Electronico *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           placeholder="tu@email.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DATOS DEL EMPRENDIMIENTO -->
+                        <div class="form-section">
+                            <h3 class="section-title-form">Datos del Emprendimiento</h3>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="nombreEmprendimiento">Nombre del Emprendimiento *</label>
+                                    <input type="text" id="nombreEmprendimiento" name="nombreEmprendimiento" required 
+                                           placeholder="Mi Emprendimiento">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rubroActividad">Rubro o Actividad Principal *</label>
+                                    <select id="rubroActividad" name="rubroActividad" required>
+                                        <option value="">Selecciona un rubro</option>
+                                        <option value="gastronomia">Gastronomia</option>
+                                        <option value="artesanias">Artesanias</option>
+                                        <option value="belleza">Belleza y Cuidado Personal</option>
+                                        <option value="indumentaria">Indumentaria y Moda</option>
+                                        <option value="alimentacion">Productos Alimenticios</option>
+                                        <option value="servicios">Servicios Profesionales</option>
+                                        <option value="tecnologia">Tecnologia</option>
+                                        <option value="educacion">Educacion</option>
+                                        <option value="salud">Salud y Bienestar</option>
+                                        <option value="decoracion">Decoracion y Hogar</option>
+                                        <option value="arte">Arte y Cultura</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="descripcionEmprendimiento">Breve Descripcion del Emprendimiento *</label>
+                                <textarea id="descripcionEmprendimiento" name="descripcionEmprendimiento" required rows="4" 
+                                          placeholder="Describe tu emprendimiento, que productos o servicios ofreces..."></textarea>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="anioInicio">Anio de Inicio *</label>
+                                    <input type="number" id="anioInicio" name="anioInicio" required min="1900" max="2026" 
+                                           placeholder="2020">
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccionActividad">Direccion del Lugar de la Actividad *</label>
+                                    <input type="text" id="direccionActividad" name="direccionActividad" required 
+                                           placeholder="Calle 456, Laboulaye">
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Situacion del Espacio *</label>
+                                    <div class="radio-group vertical">
+                                        <label class="radio-label">
+                                            <input type="radio" name="situacionEspacio" value="propio" required>
+                                            <span>Propio</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="situacionEspacio" value="alquilado">
+                                            <span>Alquilado</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="situacionEspacio" value="domiciliario">
+                                            <span>Domiciliario</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="situacionEspacio" value="otro">
+                                            <span>Otro</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Comparte el Espacio con Vivienda? *</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="comparteVivienda" value="si" required>
+                                            <span>Si</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="comparteVivienda" value="no">
+                                            <span>No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imagenes">Imagenes de tu Trabajo</label>
+                                <div class="upload-area" id="uploadArea" role="button" tabindex="0" aria-describedby="imagenesAyuda">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    <p>Arrastra y suelta tus imagenes aqui</p>
+                                    <small id="imagenesAyuda">o haz clic para seleccionar archivos JPG, PNG o WebP</small>
+                                    <input type="file" id="imagenes" name="imagenes" multiple accept="image/*">
+                                </div>
+                                <div class="image-preview-grid" id="imagePreviewGrid" aria-live="polite"></div>
+                            </div>
+                        </div>
+
+                        <!-- DATOS FISCALES -->
+                        <div class="form-section">
+                            <h3 class="section-title-form">Datos Fiscales</h3>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Estado Actual *</label>
+                                    <div class="radio-group vertical">
+                                        <label class="radio-label">
+                                            <input type="radio" name="estadoActual" value="formalizado" required>
+                                            <span>Formalizado</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="estadoActual" value="en_proceso">
+                                            <span>En proceso de formalizacion</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cuitCuil">CUIT / CUIL</label>
+                                    <input type="text" id="cuitCuil" name="cuitCuil" 
+                                           placeholder="20-12345678-9">
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Condicion Fiscal ante ARCA *</label>
+                                    <div class="radio-group vertical">
+                                        <label class="radio-label">
+                                            <input type="radio" name="condicionFiscal" value="monotributo" required>
+                                            <span>Monotributo</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="condicionFiscal" value="responsable_inscripto">
+                                            <span>Responsable Inscripto</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="condicionFiscal" value="otro">
+                                            <span>Otro</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Inscripcion en Ingresos Brutos *</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="inscripcionIIBB" value="si" required>
+                                            <span>Si</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="inscripcionIIBB" value="no">
+                                            <span>No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROYECCION Y NECESIDADES -->
+                        <div class="form-section">
+                            <h3 class="section-title-form">Proyeccion y Necesidades</h3>
+
+                            <div class="form-group">
+                                <label for="redSocial">Red Social (si posee, ingresar el link)</label>
+                                <input type="url" id="redSocial" name="redSocial" 
+                                       placeholder="https://instagram.com/mi_emprendimiento">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tipo de Apoyo Requerido *</label>
+                                <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Seleccione todas las opciones que apliquen</p>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tipoApoyo" value="financiamiento">
+                                        <span>Financiamiento</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tipoApoyo" value="capacitacion">
+                                        <span>Capacitacion</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tipoApoyo" value="espacios_venta">
+                                        <span>Espacios de Venta</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tipoApoyo" value="acompanamiento_tecnico">
+                                        <span>Acompanamiento Tecnico</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="tipoApoyo" value="otro" id="apoyoOtro">
+                                        <span>Otro</span>
+                                    </label>
+                                </div>
+                                <input type="text" id="apoyoOtroTexto" name="apoyoOtroTexto" 
+                                       placeholder="Especifique otro tipo de apoyo..." style="display: none; margin-top: 10px;">
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Intencion de participar en la Tienda Virtual *</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionTienda" value="si" required>
+                                            <span>Si</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionTienda" value="no">
+                                            <span>No</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionTienda" value="tal_vez">
+                                            <span>Tal vez</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Intencion de participar en Ferias y Eventos *</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionFerias" value="si" required>
+                                            <span>Si</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionFerias" value="no">
+                                            <span>No</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="intencionFerias" value="tal_vez">
+                                            <span>Tal vez</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CONFIGURACION DE CUENTA -->
+                        <div class="form-section">
+                            <h3 class="section-title-form">Configuracion de Cuenta</h3>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="password">Contrasena *</label>
+                                    <div class="password-input">
+                                        <input type="password" id="password" name="password" required minlength="8" 
+                                               placeholder="Minimo 8 caracteres">
+                                        <button type="button" class="toggle-password" data-target="password">
+                                            <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirmar Contrasena *</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirmPassword" name="confirmPassword" required 
+                                               placeholder="Repite tu contrasena">
+                                        <button type="button" class="toggle-password" data-target="confirmPassword">
+                                            <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TERMINOS Y CONDICIONES -->
+                        <div class="form-section">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label for="terminos">
+                                    <strong>Acepto los terminos y condiciones *</strong>
+                                    <p>Al registrarte, aceptás nuestros <a href="terminos.html">términos y condiciones</a> y 
+                                       <a href="privacidad.html">política de privacidad</a>.</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- BOTONES -->
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary btn-lg">Registrar Emprendimiento</button>
+                            <a href="index.html" class="btn btn-outline btn-lg">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">L</div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mostrar campo "Otro" cuando se selecciona en Tipo de Apoyo
+        document.getElementById('apoyoOtro').addEventListener('change', function() {
+            document.getElementById('apoyoOtroTexto').style.display = this.checked ? 'block' : 'none';
+        });
+
+        // Validar edad al enviar
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            const fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+            const hoy = new Date();
+            let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+            const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+                edad--;
+            }
+            if (edad < 18) {
+                e.preventDefault();
+                alert('Debes ser mayor de 18 anios para registrarte');
+                return;
+            }
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                alert('Las contrasenas no coinciden');
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
