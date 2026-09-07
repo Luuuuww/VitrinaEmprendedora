@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion - Laboulaye</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="emprendedores.html" class="nav-link">Emprendedores</a>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+
+                <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="auth-card">
+                <div class="registro-header">
+                    <h1 class="registro-title">Iniciar sesion</h1>
+                    <p class="registro-description">Accede para editar los datos de tu emprendimiento.</p>
+                </div>
+
+                <form class="registro-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="loginUsuario">Usuario</label>
+                        <input type="text" id="loginUsuario" name="usuario" autocomplete="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Contrasena</label>
+                        <input type="password" id="loginPassword" name="password" autocomplete="current-password" required>
+                    </div>
+
+                    <p class="form-message" id="loginMessage" aria-live="polite"></p>
+
+                    <button class="btn btn-primary btn-lg" type="submit">Ingresar</button>
+                </form>
+
+                <div class="auth-divider" id="googleLoginDivider" aria-hidden="true"><span>o</span></div>
+                <div class="google-login-area" id="googleLoginArea">
+                    <button class="google-fallback-button" id="googleFallbackButton" type="button">
+                        <span class="google-fallback-icon">G</span>
+                        <span>Iniciar sesion con Google</span>
+                    </button>
+                    <div id="googleSignInButton"></div>
+                    <p class="login-helper" id="googleLoginHelp">Ingresar con el mismo correo usado en el registro.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">&copy; 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="script.js?v=9"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboulaye - Vitrina Emprendedora</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="home-intro" aria-hidden="true">
+        <div class="home-intro-content">
+            <video class="home-intro-video" autoplay muted playsinline preload="auto">
+                <source src="videoembajador.webm" type="video/webm">
+            </video>
+            <strong>¡Hola!</strong>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200" alt="Municipalidad de Laboulaye">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-trigger">
+                            Servicios
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="escuela-emprendedores.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                Escuela Emprendedores
+                            </a>
+                            <a href="cal.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Calendario de eventos
+                            </a>
+                            <a href="herramientas-digitales.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                Herramientas Digitales
+                            </a>
+                            <a href="financiamiento.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                Financiamiento
+                            </a>
+                        </div>
+                    </div>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+
+                <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <section class="home-hero">
+            <div class="container home-hero-grid">
+                <div class="home-hero-copy">
+                    <span class="home-eyebrow">Municipalidad de Laboulaye</span>
+                    <h1>Vitrina Emprendedora</h1>
+                    <p>
+                        Un espacio para que los emprendedores locales se formen, muestren sus productos,
+                        encuentren herramientas y se conecten con nuevas oportunidades.
+                    </p>
+                    <div class="home-hero-actions">
+                        <a href="registro.html" class="btn btn-primary btn-lg">Registrar emprendimiento</a>
+                        <a href="emprendedores.html" class="btn btn-outline-white btn-lg">Ver emprendedores</a>
+                    </div>
+                </div>
+
+                <div class="home-hero-media">
+                    <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=900&auto=format&fit=crop" alt="Emprendedores locales atendiendo un comercio">
+                    <div class="home-hero-note">
+                        <strong>Agenda activa</strong>
+                        <span>Capacitaciones, ferias y encuentros para la comunidad.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section">
+            <div class="container">
+                <div class="home-section-heading">
+                    <span>Servicios</span>
+                    <h2>Todo el recorrido emprendedor en un solo lugar</h2>
+                    <p>Elegí el recurso que necesitás según el momento de tu proyecto.</p>
+                </div>
+
+                <div class="home-services-grid">
+                    <a href="escuela-emprendedores.html" class="home-service-card purple">
+                        <div class="service-icon purple">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Escuela Emprendedora</h3>
+                        <p>Formación práctica para ordenar ideas, mejorar gestión y fortalecer ventas.</p>
+                    </a>
+
+                    <a href="cal.html" class="home-service-card pink">
+                        <div class="service-icon pink">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Calendario de eventos</h3>
+                        <p>Agenda actualizada con actividades de la ciudad y eventos emprendedores.</p>
+                    </a>
+
+                    <a href="herramientas-digitales.html" class="home-service-card green">
+                        <div class="service-icon green">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Herramientas digitales</h3>
+                        <p>Recursos para vender, publicar, organizar pedidos y comunicar mejor.</p>
+                    </a>
+
+                    <a href="financiamiento.html" class="home-service-card indigo">
+                        <div class="service-icon indigo">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Financiamiento</h3>
+                        <p>Alternativas de financiamiento para empresas y un simulador de cuotas orientativo.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-process-section">
+            <div class="container home-process-grid">
+                <div class="home-section-heading left">
+                    <span>Cómo empezar</span>
+                    <h2>Una guía simple para avanzar</h2>
+                    <p>La página queda organizada para que cada visita encuentre rápido su próximo paso.</p>
+                </div>
+                <div class="home-process-list">
+                    <article>
+                        <strong>1</strong>
+                        <div>
+                            <h3>Registrá tu emprendimiento</h3>
+                            <p>Completá tus datos para formar parte de la vitrina local.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <strong>2</strong>
+                        <div>
+                            <h3>Elegí el recurso indicado</h3>
+                            <p>Accedé a capacitación, herramientas digitales o financiamiento para tu proyecto.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <strong>3</strong>
+                        <div>
+                            <h3>Participá de la agenda</h3>
+                            <p>Consultá eventos, ferias y encuentros para mostrar tu proyecto.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-cta">
+            <div class="container home-cta-inner">
+                <div>
+                    <span>Comunidad emprendedora</span>
+                    <h2>Impulsá tu proyecto con apoyo local</h2>
+                    <p>Sumate a la Vitrina Emprendedora y hacé visible lo que producís, ofrecés o querés hacer crecer.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="registro.html" class="btn btn-primary">Registrarme ahora</a>
+                    <a href="emprendedores.html" class="btn btn-outline">Conocer emprendedores</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">© 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

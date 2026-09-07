@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Digitales - Vitrina Emprendedora Laboulaye</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                        <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200px">
+                    <div class="logo-text">
+                        <p class="logo-subtitle">VITRINA EMPRENDEDORA</p>
+                    </div>
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-link dropdown-trigger">
+                            Servicios
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="escuela-emprendedores.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                Escuela Emprendedores
+                            </a>
+                            <a href="cal.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                Calendario de eventos
+                            </a>
+                            <a href="herramientas-digitales.html" aria-current="page">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                                Herramientas Digitales
+                            </a>
+                            <a href="financiamiento.html">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                </svg>
+                                Financiamiento
+                            </a>
+                        </div>
+                    </div>
+                    <a href="registro.html" class="nav-link">Registrarse</a>
+                </div>
+
+                <a href="emprendedores.html" class="btn btn-primary nav-cta">Ver Emprendedores</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="digital-hero">
+        <div class="container digital-hero-grid">
+            <div class="digital-hero-copy">
+                <span class="eyebrow">Recursos para vender, organizar y crecer</span>
+                <h1>Herramientas Digitales</h1>
+                <p>
+                    Una guia practica para que los emprendimientos de Laboulaye puedan mejorar su presencia online,
+                    ordenar sus ventas y tomar mejores decisiones con herramientas accesibles.
+                </p>
+                <div class="digital-hero-actions">
+                    <a href="#herramientas" class="btn btn-primary btn-lg">Explorar herramientas</a>
+                    <a href="#calculadora" class="btn btn-outline-white btn-lg">Calcular precio</a>
+                </div>
+            </div>
+
+            <div class="digital-panel" aria-label="Resumen de herramientas digitales">
+                <div class="panel-stat">
+                    <strong>9</strong>
+                    <span>herramientas seleccionadas</span>
+                </div>
+                <div class="panel-list">
+                    <div><span class="status-dot green"></span> Presencia online</div>
+                    <div><span class="status-dot purple"></span> Diseno y contenido</div>
+                    <div><span class="status-dot orange"></span> Ventas y costos</div>
+                    <div><span class="status-dot blue"></span> Gestion diaria</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content-page">
+        <div class="container">
+            <section class="tools-controls" id="herramientas">
+                <div>
+                    <h2 class="section-title left">Herramientas recomendadas</h2>
+                    <p class="section-subtitle left">Filtra por necesidad o busca por nombre para encontrar el recurso indicado.</p>
+                </div>
+                <label class="tool-search">
+                    <span>Buscar herramienta</span>
+                    <input type="search" id="toolSearch" placeholder="Ej: WhatsApp, diseno, costos">
+                </label>
+            </section>
+
+            <div class="tool-filters" aria-label="Filtrar herramientas">
+                <button class="category-badge active" data-tool-filter="todas">Todas</button>
+                <button class="category-badge" data-tool-filter="presencia">Presencia online</button>
+                <button class="category-badge" data-tool-filter="contenido">Contenido</button>
+                <button class="category-badge" data-tool-filter="ventas">Ventas</button>
+                <button class="category-badge" data-tool-filter="gestion">Gestion</button>
+            </div>
+
+            <section class="tools-grid" aria-live="polite">
+                <article class="tool-card" data-category="contenido" data-tool-text="canva diseño redes logo flyers contenido visual">
+                    <div class="tool-header">
+                        <div class="tool-icon purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="13.5" cy="6.5" r=".5"></circle>
+                                <circle cx="17.5" cy="10.5" r=".5"></circle>
+                                <circle cx="8.5" cy="7.5" r=".5"></circle>
+                                <circle cx="6.5" cy="12.5" r=".5"></circle>
+                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.7 1.7-1.7h2c3.1 0 5.5-2.5 5.5-5.5C22 6 17.5 2 12 2z"></path>
+                            </svg>
+                        </div>
+                        <span class="tool-badge purple">Contenido</span>
+                    </div>
+                    <h3 class="tool-title purple">Canva</h3>
+                    <p class="tool-description">Disena piezas para redes, folletos, historias, catalogos y presentaciones sin conocimientos avanzados.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis con planes pagos</span>
+                        <a href="https://www.canva.com" target="_blank" rel="noreferrer" class="tool-link purple">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="presencia" data-tool-text="perfil de empresa google maps busquedas presencia online ubicacion">
+                    <div class="tool-header">
+                        <div class="tool-icon blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="10" r="3"></circle>
+                                <path d="M12 21s7-4.7 7-11a7 7 0 1 0-14 0c0 6.3 7 11 7 11z"></path>
+                            </svg>
+                        </div>
+                        <span class="tool-badge blue">Presencia online</span>
+                    </div>
+                    <h3 class="tool-title blue">Perfil de Empresa de Google</h3>
+                    <p class="tool-description">Aparece en Google y Maps con horarios, fotos, productos, telefono y resenas de clientes.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis</span>
+                        <a href="https://business.google.com" target="_blank" rel="noreferrer" class="tool-link blue">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="ventas" data-tool-text="whatsapp business catalogo respuestas automaticas clientes ventas mensajes">
+                    <div class="tool-header">
+                        <div class="tool-icon green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                            </svg>
+                        </div>
+                        <span class="tool-badge green">Ventas</span>
+                    </div>
+                    <h3 class="tool-title green">WhatsApp Business</h3>
+                    <p class="tool-description">Organiza consultas, arma catalogos, crea mensajes de bienvenida y responde mas rapido.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis</span>
+                        <a href="https://business.whatsapp.com" target="_blank" rel="noreferrer" class="tool-link green">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="ventas" data-tool-text="tiendanube tienda online ecommerce pagos envios vender internet">
+                    <div class="tool-header">
+                        <div class="tool-icon orange">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <span class="tool-badge orange">E-commerce</span>
+                    </div>
+                    <h3 class="tool-title orange">Tienda Nube</h3>
+                    <p class="tool-description">Crea una tienda online con productos, medios de pago, envios y gestion de pedidos.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Planes disponibles</span>
+                        <a href="https://www.tiendanube.com" target="_blank" rel="noreferrer" class="tool-link orange">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="gestion" data-tool-text="google sheets planillas inventario gastos ventas finanzas stock gestion">
+                    <div class="tool-header">
+                        <div class="tool-icon green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="3" y1="15" x2="21" y2="15"></line>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                            </svg>
+                        </div>
+                        <span class="tool-badge green">Gestion</span>
+                    </div>
+                    <h3 class="tool-title green">Google Sheets</h3>
+                    <p class="tool-description">Controla costos, caja, stock, clientes y ventas con planillas compartidas y faciles de actualizar.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis</span>
+                        <a href="https://sheets.google.com" target="_blank" rel="noreferrer" class="tool-link green">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="contenido" data-tool-text="meta business suite instagram facebook publicaciones metricas redes sociales">
+                    <div class="tool-header">
+                        <div class="tool-icon blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
+                        <span class="tool-badge blue">Redes sociales</span>
+                    </div>
+                    <h3 class="tool-title blue">Meta Business Suite</h3>
+                    <p class="tool-description">Programa publicaciones, contesta mensajes y revisa metricas de Facebook e Instagram desde un solo lugar.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis</span>
+                        <a href="https://business.facebook.com" target="_blank" rel="noreferrer" class="tool-link blue">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="contenido" data-tool-text="capcut video reels edicion redes contenido audiovisual">
+                    <div class="tool-header">
+                        <div class="tool-icon pink">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                <rect x="1" y="5" width="15" height="14" rx="2"></rect>
+                            </svg>
+                        </div>
+                        <span class="tool-badge pink">Video</span>
+                    </div>
+                    <h3 class="tool-title pink">CapCut</h3>
+                    <p class="tool-description">Edita videos cortos, reels y tutoriales de productos con plantillas, subtitulos y musica.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis con opciones pagas</span>
+                        <a href="https://www.capcut.com" target="_blank" rel="noreferrer" class="tool-link pink">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="presencia" data-tool-text="linktree enlaces bio instagram catalogo contacto redes presencia online">
+                    <div class="tool-header">
+                        <div class="tool-icon indigo">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"></path>
+                                <path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"></path>
+                            </svg>
+                        </div>
+                        <span class="tool-badge indigo">Presencia online</span>
+                    </div>
+                    <h3 class="tool-title indigo">Linktree</h3>
+                    <p class="tool-description">Agrupa enlaces de contacto, catalogo, tienda, ubicacion y redes en una sola pagina simple.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis con planes pagos</span>
+                        <a href="https://linktr.ee" target="_blank" rel="noreferrer" class="tool-link indigo">Visitar</a>
+                    </div>
+                </article>
+
+                <article class="tool-card" data-category="gestion" data-tool-text="trello tareas pedidos organizacion produccion calendario gestion">
+                    <div class="tool-header">
+                        <div class="tool-icon yellow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="18" rx="2"></rect>
+                                <rect x="14" y="3" width="7" height="10" rx="2"></rect>
+                            </svg>
+                        </div>
+                        <span class="tool-badge yellow">Gestion</span>
+                    </div>
+                    <h3 class="tool-title yellow">Trello</h3>
+                    <p class="tool-description">Ordena pedidos, tareas, entregas y pendientes en tableros visuales faciles de compartir.</p>
+                    <div class="tool-footer">
+                        <span class="tool-type">Gratis con planes pagos</span>
+                        <a href="https://trello.com" target="_blank" rel="noreferrer" class="tool-link yellow">Visitar</a>
+                    </div>
+                </article>
+            </section>
+
+            <p class="empty-tools-message" id="emptyToolsMessage">No encontramos herramientas para esa busqueda.</p>
+
+            <section class="calculator-section" id="calculadora">
+                <div class="calculator-copy">
+                    <span class="eyebrow dark">Mini herramienta</span>
+                    <h2>Calculadora rapida de precio</h2>
+                    <p>Ingresa tu costo, margen deseado y cantidad para estimar un precio de venta inicial.</p>
+                </div>
+                <form class="calculator-card" id="priceCalculator">
+                    <label>
+                        Costo total
+                        <input type="number" id="costInput" min="0" step="0.01" placeholder="Ej: 8500">
+                    </label>
+                    <label>
+                        Margen deseado (%)
+                        <input type="number" id="marginInput" min="0" step="1" placeholder="Ej: 35">
+                    </label>
+                    <label>
+                        Unidades
+                        <input type="number" id="unitsInput" min="1" step="1" placeholder="Ej: 10">
+                    </label>
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                    <output class="calculator-result" id="calculatorResult">Completa los datos para ver el precio sugerido.</output>
+                </form>
+            </section>
+
+            <section class="tutorials-section">
+                <h2 class="section-title">Ruta sugerida para empezar</h2>
+                <p class="section-subtitle">Tres pasos simples para pasar de la idea a una presencia digital ordenada.</p>
+
+                <div class="tutorials-grid">
+                    <article class="tutorial-card">
+                        <div class="tutorial-icon">1</div>
+                        <div class="tutorial-content">
+                            <h4>Arma tu base</h4>
+                            <p>Crea tu Perfil de Empresa de Google, define tus horarios y sube fotos claras.</p>
+                            <div class="tutorial-meta">
+                                <span>30 min</span>
+                                <span class="tutorial-level">Basico</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tutorial-card">
+                        <div class="tutorial-icon">2</div>
+                        <div class="tutorial-content">
+                            <h4>Organiza la atencion</h4>
+                            <p>Configura WhatsApp Business con catalogo, etiquetas y respuestas automaticas.</p>
+                            <div class="tutorial-meta">
+                                <span>25 min</span>
+                                <span class="tutorial-level">Basico</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tutorial-card">
+                        <div class="tutorial-icon">3</div>
+                        <div class="tutorial-content">
+                            <h4>Mide y mejora</h4>
+                            <p>Lleva ventas y gastos en Sheets para saber que productos convienen potenciar.</p>
+                            <div class="tutorial-meta">
+                                <span>40 min</span>
+                                <span class="tutorial-level">Intermedio</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="benefits-section-tools">
+                <h2 class="section-title">Beneficios de digitalizarte</h2>
+                <div class="benefits-grid-tools">
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Aumenta tu visibilidad local.</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Responde consultas con mas velocidad.</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Ordena ventas, stock y gastos.</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Profesionaliza la imagen de tu marca.</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Toma decisiones con datos concretos.</span></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><span>Facilita compras y reservas online.</span></div>
+                </div>
+            </section>
+
+            <section class="cta-section gradient-bg">
+                <div class="cta-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <h2>Potenciá tu presencia digital</h2>
+                <p>Explorá recursos prácticos y capacitaciones para incorporar herramientas en tu emprendimiento.</p>
+                <div class="cta-buttons">
+                    <a href="escuela-emprendedores.html" class="btn btn-primary">Ver capacitaciones</a>
+                    <a href="registro.html" class="btn btn-outline">Registrar emprendimiento</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </div>
+                <span>LABOULAYE VITRINA EMPRENDEDORA</span>
+            </div>
+            <p class="footer-text">&copy; 2025 Municipalidad de Laboulaye - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

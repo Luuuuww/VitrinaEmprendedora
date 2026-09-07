@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de eventos - Vitrina Emprendedora</title>
+    <link rel="icon" type="image/png" href="log.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-admin-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="https://laboulaye.gob.ar/wplbye/wp-content/uploads/2024/03/img-isologo-lbye-24-1.png" width="200" alt="Municipalidad de Laboulaye">
+                    <div class="logo-text"><p class="logo-subtitle">VITRINA EMPRENDEDORA</p></div>
+                </a>
+                <div class="event-admin-actions">
+                    <a href="cal.html" class="btn btn-outline">Ver calendario</a>
+                    <button class="btn btn-outline" id="eventAdminLogout" type="button">Salir</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="event-admin-main">
+        <div class="container event-admin-container">
+            <section class="event-admin-hero">
+                <div>
+                    <span class="event-admin-eyebrow">Panel de administración</span>
+                    <h1>Gestión de eventos</h1>
+                    <p>Cargá las actividades de la ciudad y mantené la agenda actualizada.</p>
+                </div>
+                <div class="event-admin-count"><strong id="eventCount">0</strong><span>eventos cargados</span></div>
+            </section>
+
+            <div class="event-admin-grid">
+                <section class="event-form-card" aria-labelledby="eventFormTitle">
+                    <div class="event-card-heading">
+                        <span class="event-form-icon" aria-hidden="true">+</span>
+                        <div>
+                            <h2 id="eventFormTitle">Nuevo evento</h2>
+                            <p>Completá los datos para publicarlo en el calendario.</p>
+                        </div>
+                    </div>
+                    <form id="eventForm" class="event-form">
+                        <input type="hidden" id="eventId">
+                        <label for="eventTitle">Nombre del evento
+                            <input id="eventTitle" type="text" maxlength="120" required placeholder="Ej.: Feria de emprendedores">
+                        </label>
+                        <div class="event-form-row">
+                            <label for="eventDate">Día
+                                <input id="eventDate" type="date" required>
+                            </label>
+                            <label for="eventTime">Hora
+                                <input id="eventTime" type="time" required>
+                            </label>
+                        </div>
+                        <label for="eventPlace">Lugar <span>(opcional)</span>
+                            <input id="eventPlace" type="text" maxlength="100" placeholder="Ej.: Plaza General Paz">
+                        </label>
+                        <p class="event-form-message" id="eventFormMessage" aria-live="polite"></p>
+                        <div class="event-form-buttons">
+                            <button type="submit" class="btn btn-primary" id="eventSubmit">Agregar evento</button>
+                            <button type="button" class="btn btn-outline" id="eventCancelEdit" hidden>Cancelar edición</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="event-list-card" aria-labelledby="eventListTitle">
+                    <div class="event-list-heading">
+                        <div>
+                            <span class="event-list-kicker">Agenda</span>
+                            <h2 id="eventListTitle">Todos los eventos</h2>
+                        </div>
+                    </div>
+                    <div class="event-list" id="eventList" aria-live="polite"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="script.js?v=9"></script>
+</body>
+</html>
